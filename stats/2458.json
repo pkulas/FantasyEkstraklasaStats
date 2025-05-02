@@ -1,0 +1,42 @@
+{
+    "name": "Zwoźny Hubert",
+    "team": "Korona Kielce",
+    "next_gameweek": 31,
+    "total_points": 31,
+    "recent_matches": [
+        {
+            "opponent": "WID",
+            "score": "2 : 1",
+            "played_time": "-",
+            "points": "-",
+            "game_week": 28,
+            "team_result": "win"
+        },
+        {
+            "opponent": "PIA",
+            "score": "1 : 1",
+            "played_time": 20,
+            "points": 1,
+            "game_week": 29,
+            "team_result": "draw"
+        },
+        {
+            "opponent": "JAG",
+            "score": "3 : 1",
+            "played_time": 12,
+            "points": 2,
+            "game_week": 30,
+            "team_result": "win"
+        }
+    ],
+    "upcoming_matches": [
+        {
+            "opponent": "GKS",
+            "game_week": 31
+        },
+        {
+            "opponent": "LGD",
+            "game_week": 32
+        }
+    ]
+}

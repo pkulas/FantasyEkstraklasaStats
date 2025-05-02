@@ -1,0 +1,46 @@
+{
+    "name": "Nunes Fabio",
+    "team": "Widzew Łódź",
+    "next_gameweek": 31,
+    "total_points": 7,
+    "recent_matches": [
+        {
+            "opponent": "KOR",
+            "score": "2 : 1",
+            "played_time": 8,
+            "points": 1,
+            "game_week": 28,
+            "team_result": "lose"
+        },
+        {
+            "opponent": "MOT",
+            "score": "1 : 2",
+            "played_time": 12,
+            "points": 1,
+            "game_week": 29,
+            "team_result": "lose"
+        },
+        {
+            "opponent": "GÓR",
+            "score": "0 : 0",
+            "played_time": 16,
+            "points": 1,
+            "game_week": 30,
+            "team_result": "draw"
+        }
+    ],
+    "upcoming_matches": [
+        {
+            "opponent": "LEG",
+            "game_week": 31
+        },
+        {
+            "opponent": "ZAG",
+            "game_week": 32
+        },
+        {
+            "opponent": "LEG",
+            "game_week": 32
+        }
+    ]
+}

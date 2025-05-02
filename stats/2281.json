@@ -1,0 +1,46 @@
+{
+    "name": "Kerk Sebastian",
+    "team": "Widzew Łódź",
+    "next_gameweek": 31,
+    "total_points": 20,
+    "recent_matches": [
+        {
+            "opponent": "KOR",
+            "score": "2 : 1",
+            "played_time": 28,
+            "points": 1,
+            "game_week": 28,
+            "team_result": "lose"
+        },
+        {
+            "opponent": "MOT",
+            "score": "1 : 2",
+            "played_time": 21,
+            "points": 3,
+            "game_week": 29,
+            "team_result": "lose"
+        },
+        {
+            "opponent": "GÓR",
+            "score": "0 : 0",
+            "played_time": "-",
+            "points": "-",
+            "game_week": 30,
+            "team_result": "draw"
+        }
+    ],
+    "upcoming_matches": [
+        {
+            "opponent": "LEG",
+            "game_week": 31
+        },
+        {
+            "opponent": "ZAG",
+            "game_week": 32
+        },
+        {
+            "opponent": "LEG",
+            "game_week": 32
+        }
+    ]
+}

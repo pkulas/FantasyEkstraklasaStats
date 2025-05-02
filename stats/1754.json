@@ -1,0 +1,46 @@
+{
+    "name": "Król Michał",
+    "team": "Motor Lublin",
+    "next_gameweek": 31,
+    "total_points": 28,
+    "recent_matches": [
+        {
+            "opponent": "LPO",
+            "score": "1 : 2",
+            "played_time": 45,
+            "points": 6,
+            "game_week": 28,
+            "team_result": "lose"
+        },
+        {
+            "opponent": "WID",
+            "score": "1 : 2",
+            "played_time": 90,
+            "points": 3,
+            "game_week": 29,
+            "team_result": "win"
+        },
+        {
+            "opponent": "CRA",
+            "score": "0 : 1",
+            "played_time": 21,
+            "points": 1,
+            "game_week": 30,
+            "team_result": "lose"
+        }
+    ],
+    "upcoming_matches": [
+        {
+            "opponent": "POG",
+            "game_week": 31
+        },
+        {
+            "opponent": "PIA",
+            "game_week": 32
+        },
+        {
+            "opponent": "POG",
+            "game_week": 32
+        }
+    ]
+}

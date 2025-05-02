@@ -1,0 +1,42 @@
+{
+    "name": "Gerbowski Fryderyk",
+    "team": "Stal Mielec",
+    "next_gameweek": 31,
+    "total_points": 16,
+    "recent_matches": [
+        {
+            "opponent": "LGD",
+            "score": "3 : 2",
+            "played_time": 62,
+            "points": 7,
+            "game_week": 28,
+            "team_result": "lose"
+        },
+        {
+            "opponent": "GÓR",
+            "score": "0 : 0",
+            "played_time": 45,
+            "points": 2,
+            "game_week": 29,
+            "team_result": "draw"
+        },
+        {
+            "opponent": "ZAG",
+            "score": "2 : 2",
+            "played_time": 56,
+            "points": 2,
+            "game_week": 30,
+            "team_result": "draw"
+        }
+    ],
+    "upcoming_matches": [
+        {
+            "opponent": "RCZ",
+            "game_week": 31
+        },
+        {
+            "opponent": "PUN",
+            "game_week": 32
+        }
+    ]
+}

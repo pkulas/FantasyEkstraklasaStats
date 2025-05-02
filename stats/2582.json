@@ -1,0 +1,42 @@
+{
+    "name": "Minczew Martin",
+    "team": "Cracovia",
+    "next_gameweek": 31,
+    "total_points": 13,
+    "recent_matches": [
+        {
+            "opponent": "ŚLA",
+            "score": "2 : 4",
+            "played_time": 30,
+            "points": 0,
+            "game_week": 28,
+            "team_result": "lose"
+        },
+        {
+            "opponent": "LPO",
+            "score": "2 : 1",
+            "played_time": 30,
+            "points": 0,
+            "game_week": 29,
+            "team_result": "lose"
+        },
+        {
+            "opponent": "MOT",
+            "score": "0 : 1",
+            "played_time": "-",
+            "points": "-",
+            "game_week": 30,
+            "team_result": "win"
+        }
+    ],
+    "upcoming_matches": [
+        {
+            "opponent": "LGD",
+            "game_week": 31
+        },
+        {
+            "opponent": "GKS",
+            "game_week": 32
+        }
+    ]
+}

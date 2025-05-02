@@ -1,0 +1,42 @@
+{
+    "name": "Udahl Henrik",
+    "team": "Śląsk Wrocław",
+    "next_gameweek": 31,
+    "total_points": 12,
+    "recent_matches": [
+        {
+            "opponent": "CRA",
+            "score": "2 : 4",
+            "played_time": 24,
+            "points": 2,
+            "game_week": 28,
+            "team_result": "win"
+        },
+        {
+            "opponent": "GKS",
+            "score": "0 : 2",
+            "played_time": 20,
+            "points": 1,
+            "game_week": 29,
+            "team_result": "lose"
+        },
+        {
+            "opponent": "RCZ",
+            "score": "3 : 0",
+            "played_time": 45,
+            "points": 2,
+            "game_week": 30,
+            "team_result": "lose"
+        }
+    ],
+    "upcoming_matches": [
+        {
+            "opponent": "ZAG",
+            "game_week": 31
+        },
+        {
+            "opponent": "GÓR",
+            "game_week": 32
+        }
+    ]
+}

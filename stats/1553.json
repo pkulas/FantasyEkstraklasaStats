@@ -1,0 +1,42 @@
+{
+    "name": "Zahovič Luka",
+    "team": "Górnik Zabrze",
+    "next_gameweek": 31,
+    "total_points": 43,
+    "recent_matches": [
+        {
+            "opponent": "ZAG",
+            "score": "2 : 1",
+            "played_time": 89,
+            "points": 2,
+            "game_week": 28,
+            "team_result": "lose"
+        },
+        {
+            "opponent": "STM",
+            "score": "0 : 0",
+            "played_time": 63,
+            "points": 2,
+            "game_week": 29,
+            "team_result": "draw"
+        },
+        {
+            "opponent": "WID",
+            "score": "0 : 0",
+            "played_time": 72,
+            "points": 2,
+            "game_week": 30,
+            "team_result": "draw"
+        }
+    ],
+    "upcoming_matches": [
+        {
+            "opponent": "JAG",
+            "game_week": 31
+        },
+        {
+            "opponent": "ŚLA",
+            "game_week": 32
+        }
+    ]
+}

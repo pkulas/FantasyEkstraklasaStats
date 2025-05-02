@@ -1,0 +1,42 @@
+{
+    "name": "Kolan Jakub",
+    "team": "KGHM Zagłębie Lubin",
+    "next_gameweek": 31,
+    "total_points": 25,
+    "recent_matches": [
+        {
+            "opponent": "GÓR",
+            "score": "2 : 1",
+            "played_time": 90,
+            "points": 3,
+            "game_week": 28,
+            "team_result": "win"
+        },
+        {
+            "opponent": "JAG",
+            "score": "1 : 3",
+            "played_time": 72,
+            "points": 3,
+            "game_week": 29,
+            "team_result": "win"
+        },
+        {
+            "opponent": "STM",
+            "score": "2 : 2",
+            "played_time": 45,
+            "points": 1,
+            "game_week": 30,
+            "team_result": "draw"
+        }
+    ],
+    "upcoming_matches": [
+        {
+            "opponent": "ŚLA",
+            "game_week": 31
+        },
+        {
+            "opponent": "WID",
+            "game_week": 32
+        }
+    ]
+}
