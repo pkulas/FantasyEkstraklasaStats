@@ -1,0 +1,42 @@
+{
+    "name": "Sotiríou Konstantínos",
+    "team": "Korona Kielce",
+    "next_gameweek": 32,
+    "total_points": 35,
+    "recent_matches": [
+        {
+            "opponent": "PIA",
+            "score": "1 : 1",
+            "played_time": 90,
+            "points": 2,
+            "game_week": 29,
+            "team_result": "draw"
+        },
+        {
+            "opponent": "JAG",
+            "score": "3 : 1",
+            "played_time": 90,
+            "points": 3,
+            "game_week": 30,
+            "team_result": "win"
+        },
+        {
+            "opponent": "GKS",
+            "score": "2 : 1",
+            "played_time": 52,
+            "points": 3,
+            "game_week": 31,
+            "team_result": "win"
+        }
+    ],
+    "upcoming_matches": [
+        {
+            "opponent": "LGD",
+            "game_week": 32
+        },
+        {
+            "opponent": "RCZ",
+            "game_week": 33
+        }
+    ]
+}

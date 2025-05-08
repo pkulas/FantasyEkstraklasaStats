@@ -1,0 +1,46 @@
+{
+    "name": "Rosa Kacper",
+    "team": "Motor Lublin",
+    "next_gameweek": 32,
+    "total_points": 21,
+    "recent_matches": [
+        {
+            "opponent": "WID",
+            "score": "1 : 2",
+            "played_time": "-",
+            "points": "-",
+            "game_week": 29,
+            "team_result": "win"
+        },
+        {
+            "opponent": "CRA",
+            "score": "0 : 1",
+            "played_time": "-",
+            "points": "-",
+            "game_week": 30,
+            "team_result": "lose"
+        },
+        {
+            "opponent": "POG",
+            "score": "-",
+            "played_time": "-",
+            "points": "-",
+            "game_week": 31,
+            "team_result": null
+        }
+    ],
+    "upcoming_matches": [
+        {
+            "opponent": "PIA",
+            "game_week": 32
+        },
+        {
+            "opponent": "POG",
+            "game_week": 32
+        },
+        {
+            "opponent": "ZAG",
+            "game_week": 33
+        }
+    ]
+}

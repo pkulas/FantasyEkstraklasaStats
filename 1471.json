@@ -1,0 +1,42 @@
+{
+    "name": "Lukoszek Kamil",
+    "team": "Górnik Zabrze",
+    "next_gameweek": 32,
+    "total_points": 1,
+    "recent_matches": [
+        {
+            "opponent": "STM",
+            "score": "0 : 0",
+            "played_time": "-",
+            "points": "-",
+            "game_week": 29,
+            "team_result": "draw"
+        },
+        {
+            "opponent": "WID",
+            "score": "0 : 0",
+            "played_time": "-",
+            "points": "-",
+            "game_week": 30,
+            "team_result": "draw"
+        },
+        {
+            "opponent": "JAG",
+            "score": "1 : 1",
+            "played_time": 8,
+            "points": 1,
+            "game_week": 31,
+            "team_result": "draw"
+        }
+    ],
+    "upcoming_matches": [
+        {
+            "opponent": "ŚLA",
+            "game_week": 32
+        },
+        {
+            "opponent": "PIA",
+            "game_week": 33
+        }
+    ]
+}

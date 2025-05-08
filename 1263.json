@@ -1,0 +1,42 @@
+{
+    "name": "Domański Maciej",
+    "team": "Stal Mielec",
+    "next_gameweek": 32,
+    "total_points": 25,
+    "recent_matches": [
+        {
+            "opponent": "GÓR",
+            "score": "0 : 0",
+            "played_time": 21,
+            "points": 1,
+            "game_week": 29,
+            "team_result": "draw"
+        },
+        {
+            "opponent": "ZAG",
+            "score": "2 : 2",
+            "played_time": 34,
+            "points": 1,
+            "game_week": 30,
+            "team_result": "draw"
+        },
+        {
+            "opponent": "RCZ",
+            "score": "0 : 2",
+            "played_time": 25,
+            "points": 1,
+            "game_week": 31,
+            "team_result": "lose"
+        }
+    ],
+    "upcoming_matches": [
+        {
+            "opponent": "PUN",
+            "game_week": 32
+        },
+        {
+            "opponent": "RAD",
+            "game_week": 33
+        }
+    ]
+}

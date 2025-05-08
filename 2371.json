@@ -1,0 +1,42 @@
+{
+    "name": "Biedrzycki Bartosz",
+    "team": "Cracovia",
+    "next_gameweek": 32,
+    "total_points": 17,
+    "recent_matches": [
+        {
+            "opponent": "LPO",
+            "score": "2 : 1",
+            "played_time": 30,
+            "points": 3,
+            "game_week": 29,
+            "team_result": "lose"
+        },
+        {
+            "opponent": "MOT",
+            "score": "0 : 1",
+            "played_time": 1,
+            "points": 2,
+            "game_week": 30,
+            "team_result": "win"
+        },
+        {
+            "opponent": "LGD",
+            "score": "0 : 2",
+            "played_time": 82,
+            "points": 2,
+            "game_week": 31,
+            "team_result": "lose"
+        }
+    ],
+    "upcoming_matches": [
+        {
+            "opponent": "GKS",
+            "game_week": 32
+        },
+        {
+            "opponent": "LEG",
+            "game_week": 33
+        }
+    ]
+}

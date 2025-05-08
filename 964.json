@@ -1,0 +1,42 @@
+{
+    "name": "Milewski Sebastian",
+    "team": "GKS Katowice",
+    "next_gameweek": 32,
+    "total_points": 7,
+    "recent_matches": [
+        {
+            "opponent": "ŚLA",
+            "score": "0 : 2",
+            "played_time": "-",
+            "points": "-",
+            "game_week": 29,
+            "team_result": "win"
+        },
+        {
+            "opponent": "LEG",
+            "score": "1 : 3",
+            "played_time": "-",
+            "points": "-",
+            "game_week": 30,
+            "team_result": "lose"
+        },
+        {
+            "opponent": "KOR",
+            "score": "2 : 1",
+            "played_time": "-",
+            "points": "-",
+            "game_week": 31,
+            "team_result": "lose"
+        }
+    ],
+    "upcoming_matches": [
+        {
+            "opponent": "CRA",
+            "game_week": 32
+        },
+        {
+            "opponent": "LPO",
+            "game_week": 33
+        }
+    ]
+}

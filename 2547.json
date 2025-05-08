@@ -1,0 +1,42 @@
+{
+    "name": "Al-Hamlawi Assad",
+    "team": "Śląsk Wrocław",
+    "next_gameweek": 32,
+    "total_points": 53,
+    "recent_matches": [
+        {
+            "opponent": "GKS",
+            "score": "0 : 2",
+            "played_time": 70,
+            "points": 2,
+            "game_week": 29,
+            "team_result": "lose"
+        },
+        {
+            "opponent": "RCZ",
+            "score": "3 : 0",
+            "played_time": 45,
+            "points": 1,
+            "game_week": 30,
+            "team_result": "lose"
+        },
+        {
+            "opponent": "ZAG",
+            "score": "3 : 1",
+            "played_time": 82,
+            "points": 7,
+            "game_week": 31,
+            "team_result": "win"
+        }
+    ],
+    "upcoming_matches": [
+        {
+            "opponent": "GÓR",
+            "game_week": 32
+        },
+        {
+            "opponent": "JAG",
+            "game_week": 33
+        }
+    ]
+}
