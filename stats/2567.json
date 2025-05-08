@@ -1,17 +1,9 @@
 {
     "name": "Gale Thierry",
     "team": "Piast Gliwice",
-    "next_gameweek": 31,
-    "total_points": 13,
+    "next_gameweek": 32,
+    "total_points": 14,
     "recent_matches": [
-        {
-            "opponent": "POG",
-            "score": "2 : 1",
-            "played_time": 66,
-            "points": 3,
-            "game_week": 28,
-            "team_result": "win"
-        },
         {
             "opponent": "KOR",
             "score": "1 : 1",
@@ -27,16 +19,24 @@
             "points": 1,
             "game_week": 30,
             "team_result": "lose"
+        },
+        {
+            "opponent": "RAD",
+            "score": "0 : 0",
+            "played_time": 14,
+            "points": 1,
+            "game_week": 31,
+            "team_result": "draw"
         }
     ],
     "upcoming_matches": [
         {
-            "opponent": "RAD",
-            "game_week": 31
-        },
-        {
             "opponent": "MOT",
             "game_week": 32
+        },
+        {
+            "opponent": "GÓR",
+            "game_week": 33
         }
     ]
 }

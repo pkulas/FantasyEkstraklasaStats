@@ -1,17 +1,9 @@
 {
     "name": "Elitim Juergen",
     "team": "Legia Warszawa",
-    "next_gameweek": 31,
+    "next_gameweek": 32,
     "total_points": 27,
     "recent_matches": [
-        {
-            "opponent": "JAG",
-            "score": "0 : 1",
-            "played_time": 65,
-            "points": 2,
-            "game_week": 28,
-            "team_result": "lose"
-        },
         {
             "opponent": "LGD",
             "score": "2 : 1",
@@ -27,13 +19,17 @@
             "points": 3,
             "game_week": 30,
             "team_result": "win"
+        },
+        {
+            "opponent": "WID",
+            "score": "-",
+            "played_time": "-",
+            "points": "-",
+            "game_week": 31,
+            "team_result": null
         }
     ],
     "upcoming_matches": [
-        {
-            "opponent": "WID",
-            "game_week": 31
-        },
         {
             "opponent": "LPO",
             "game_week": 32
@@ -41,6 +37,10 @@
         {
             "opponent": "WID",
             "game_week": 32
+        },
+        {
+            "opponent": "CRA",
+            "game_week": 33
         }
     ]
 }

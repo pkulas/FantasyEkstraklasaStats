@@ -1,17 +1,9 @@
 {
     "name": "Trelowski Kacper",
     "team": "Raków Częstochowa",
-    "next_gameweek": 31,
-    "total_points": 70,
+    "next_gameweek": 32,
+    "total_points": 76,
     "recent_matches": [
-        {
-            "opponent": "RAD",
-            "score": "2 : 1",
-            "played_time": 90,
-            "points": 4,
-            "game_week": 28,
-            "team_result": "win"
-        },
         {
             "opponent": "POG",
             "score": "1 : 0",
@@ -27,16 +19,24 @@
             "points": 8,
             "game_week": 30,
             "team_result": "win"
+        },
+        {
+            "opponent": "STM",
+            "score": "0 : 2",
+            "played_time": 90,
+            "points": 6,
+            "game_week": 31,
+            "team_result": "win"
         }
     ],
     "upcoming_matches": [
         {
-            "opponent": "STM",
-            "game_week": 31
-        },
-        {
             "opponent": "JAG",
             "game_week": 32
+        },
+        {
+            "opponent": "KOR",
+            "game_week": 33
         }
     ]
 }

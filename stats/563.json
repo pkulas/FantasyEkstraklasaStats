@@ -1,17 +1,9 @@
 {
     "name": "Wasielewski Marcin",
     "team": "GKS Katowice",
-    "next_gameweek": 31,
+    "next_gameweek": 32,
     "total_points": 54,
     "recent_matches": [
-        {
-            "opponent": "PUN",
-            "score": "3 : 1",
-            "played_time": 90,
-            "points": 5,
-            "game_week": 28,
-            "team_result": "win"
-        },
         {
             "opponent": "ŚLA",
             "score": "0 : 2",
@@ -27,16 +19,24 @@
             "points": 2,
             "game_week": 30,
             "team_result": "lose"
+        },
+        {
+            "opponent": "KOR",
+            "score": "2 : 1",
+            "played_time": "-",
+            "points": "-",
+            "game_week": 31,
+            "team_result": "lose"
         }
     ],
     "upcoming_matches": [
         {
-            "opponent": "KOR",
-            "game_week": 31
-        },
-        {
             "opponent": "CRA",
             "game_week": 32
+        },
+        {
+            "opponent": "LPO",
+            "game_week": 33
         }
     ]
 }

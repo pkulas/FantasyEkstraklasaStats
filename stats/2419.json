@@ -1,17 +1,9 @@
 {
     "name": "Ceglarz Piotr",
     "team": "Motor Lublin",
-    "next_gameweek": 31,
+    "next_gameweek": 32,
     "total_points": 30,
     "recent_matches": [
-        {
-            "opponent": "LPO",
-            "score": "1 : 2",
-            "played_time": 12,
-            "points": 1,
-            "game_week": 28,
-            "team_result": "lose"
-        },
         {
             "opponent": "WID",
             "score": "1 : 2",
@@ -27,13 +19,17 @@
             "points": 2,
             "game_week": 30,
             "team_result": "lose"
+        },
+        {
+            "opponent": "POG",
+            "score": "-",
+            "played_time": "-",
+            "points": "-",
+            "game_week": 31,
+            "team_result": null
         }
     ],
     "upcoming_matches": [
-        {
-            "opponent": "POG",
-            "game_week": 31
-        },
         {
             "opponent": "PIA",
             "game_week": 32
@@ -41,6 +37,10 @@
         {
             "opponent": "POG",
             "game_week": 32
+        },
+        {
+            "opponent": "ZAG",
+            "game_week": 33
         }
     ]
 }

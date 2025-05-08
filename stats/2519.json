@@ -1,17 +1,9 @@
 {
     "name": "Pietuszewski Oskar",
     "team": "Jagiellonia Białystok",
-    "next_gameweek": 31,
-    "total_points": 20,
+    "next_gameweek": 32,
+    "total_points": 27,
     "recent_matches": [
-        {
-            "opponent": "LEG",
-            "score": "0 : 1",
-            "played_time": "-",
-            "points": "-",
-            "game_week": 28,
-            "team_result": "win"
-        },
         {
             "opponent": "ZAG",
             "score": "1 : 3",
@@ -27,16 +19,24 @@
             "points": 1,
             "game_week": 30,
             "team_result": "lose"
+        },
+        {
+            "opponent": "GÓR",
+            "score": "1 : 1",
+            "played_time": 86,
+            "points": 7,
+            "game_week": 31,
+            "team_result": "draw"
         }
     ],
     "upcoming_matches": [
         {
-            "opponent": "GÓR",
-            "game_week": 31
-        },
-        {
             "opponent": "RCZ",
             "game_week": 32
+        },
+        {
+            "opponent": "ŚLA",
+            "game_week": 33
         }
     ]
 }

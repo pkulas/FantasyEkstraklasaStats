@@ -1,17 +1,9 @@
 {
     "name": "Bobček Tomáš",
     "team": "Lechia Gdańsk",
-    "next_gameweek": 31,
+    "next_gameweek": 32,
     "total_points": 60,
     "recent_matches": [
-        {
-            "opponent": "STM",
-            "score": "3 : 2",
-            "played_time": 90,
-            "points": 12,
-            "game_week": 28,
-            "team_result": "win"
-        },
         {
             "opponent": "LEG",
             "score": "2 : 1",
@@ -27,16 +19,24 @@
             "points": 7,
             "game_week": 30,
             "team_result": "win"
+        },
+        {
+            "opponent": "CRA",
+            "score": "0 : 2",
+            "played_time": "-",
+            "points": "-",
+            "game_week": 31,
+            "team_result": "win"
         }
     ],
     "upcoming_matches": [
         {
-            "opponent": "CRA",
-            "game_week": 31
-        },
-        {
             "opponent": "KOR",
             "game_week": 32
+        },
+        {
+            "opponent": "POG",
+            "game_week": 33
         }
     ]
 }

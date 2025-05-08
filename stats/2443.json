@@ -1,17 +1,9 @@
 {
     "name": "Kozlovský Samuel",
     "team": "Widzew Łódź",
-    "next_gameweek": 31,
+    "next_gameweek": 32,
     "total_points": 29,
     "recent_matches": [
-        {
-            "opponent": "KOR",
-            "score": "2 : 1",
-            "played_time": 90,
-            "points": 1,
-            "game_week": 28,
-            "team_result": "lose"
-        },
         {
             "opponent": "MOT",
             "score": "1 : 2",
@@ -27,13 +19,17 @@
             "points": 5,
             "game_week": 30,
             "team_result": "draw"
+        },
+        {
+            "opponent": "LEG",
+            "score": "-",
+            "played_time": "-",
+            "points": "-",
+            "game_week": 31,
+            "team_result": null
         }
     ],
     "upcoming_matches": [
-        {
-            "opponent": "LEG",
-            "game_week": 31
-        },
         {
             "opponent": "ZAG",
             "game_week": 32
@@ -41,6 +37,10 @@
         {
             "opponent": "LEG",
             "game_week": 32
+        },
+        {
+            "opponent": "PUN",
+            "game_week": 33
         }
     ]
 }

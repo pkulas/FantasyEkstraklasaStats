@@ -1,17 +1,9 @@
 {
     "name": "Nowak Bartosz",
     "team": "GKS Katowice",
-    "next_gameweek": 31,
-    "total_points": 42,
+    "next_gameweek": 32,
+    "total_points": 44,
     "recent_matches": [
-        {
-            "opponent": "PUN",
-            "score": "3 : 1",
-            "played_time": 90,
-            "points": 6,
-            "game_week": 28,
-            "team_result": "win"
-        },
         {
             "opponent": "ŚLA",
             "score": "0 : 2",
@@ -27,16 +19,24 @@
             "points": 2,
             "game_week": 30,
             "team_result": "lose"
+        },
+        {
+            "opponent": "KOR",
+            "score": "2 : 1",
+            "played_time": 82,
+            "points": 2,
+            "game_week": 31,
+            "team_result": "lose"
         }
     ],
     "upcoming_matches": [
         {
-            "opponent": "KOR",
-            "game_week": 31
-        },
-        {
             "opponent": "CRA",
             "game_week": 32
+        },
+        {
+            "opponent": "LPO",
+            "game_week": 33
         }
     ]
 }

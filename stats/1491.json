@@ -1,17 +1,9 @@
 {
     "name": "Janasik Patryk",
     "team": "Cracovia",
-    "next_gameweek": 31,
-    "total_points": 14,
+    "next_gameweek": 32,
+    "total_points": 16,
     "recent_matches": [
-        {
-            "opponent": "ŚLA",
-            "score": "2 : 4",
-            "played_time": 21,
-            "points": 1,
-            "game_week": 28,
-            "team_result": "lose"
-        },
         {
             "opponent": "LPO",
             "score": "2 : 1",
@@ -27,16 +19,24 @@
             "points": 6,
             "game_week": 30,
             "team_result": "win"
+        },
+        {
+            "opponent": "LGD",
+            "score": "0 : 2",
+            "played_time": 45,
+            "points": 2,
+            "game_week": 31,
+            "team_result": "lose"
         }
     ],
     "upcoming_matches": [
         {
-            "opponent": "LGD",
-            "game_week": 31
-        },
-        {
             "opponent": "GKS",
             "game_week": 32
+        },
+        {
+            "opponent": "LEG",
+            "game_week": 33
         }
     ]
 }
