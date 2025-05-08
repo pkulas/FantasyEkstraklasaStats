@@ -1,0 +1,252 @@
+// ==UserScript==
+// @name         Fantasy Ekstraklasa Helper
+// @namespace    http://tampermonkey.net/
+// @version      1.6
+// @description  Wyświetla statystyki po najechaniu na gracza
+// @author       YourName
+// @match        *://fantasy.ekstraklasa.org/user-team/*
+// @grant        none
+// ==/UserScript==
+
+(function () {
+    'use strict';
+    let activePopup = null;
+
+    // *** Obiekt cache dla graczy, aby nie pobierać danych wielokrotnie ***
+    const playerDataCache = {};
+
+    // *** Funkcja pobierająca dane z API ***
+    async function fetchPlayerData(playerId) {
+        // Sprawdzanie, czy dane są już w cache
+        if (playerDataCache[playerId]) {
+            return playerDataCache[playerId];
+        }
+
+        try {
+            const response = await fetch(`https://pkulas.github.io/FantasyEkstraklasaStats/stats/${playerId}.json`);
+            if (!response.ok) {
+                console.error(`[API] Błąd w odpowiedzi dla gracza o ID: ${playerId}. Status: ${response.status}`);
+                return null;
+            }
+            const data = await response.json();
+
+
+            // Dodanie danych gracza do cache
+            playerDataCache[playerId] = data;
+
+            return data;
+        } catch (error) {
+            console.error(`[API] Wystąpił błąd podczas pobierania danych dla gracza ID ${playerId}:`, error);
+            return null;
+        }
+    }
+
+    // *** Funkcja tworząca tabelę HTML z danymi recent_matches ***
+    function createMatchesTable(recentMatches, upcoming_matches) {
+        if (!recentMatches || recentMatches.length === 0) {
+            return '<div>Zawodnik nie grał ani minuty w tej edycji.</div>';
+        }
+
+        let tableHTML = `
+            <table style="width: 100%; border-collapse: collapse; text-align: center; font-size: 12px;">
+                <thead>
+                    <tr style="background-color: #f4f4f4;">
+                        <th style="border: 1px solid #ddd; padding: 5px;">Kolejka</th>
+                        <th style="border: 1px solid #ddd; padding: 5px;">Rywal</th>
+                        <th style="border: 1px solid #ddd; padding: 5px;">Wynik</th>
+                        <th style="border: 1px solid #ddd; padding: 5px;">Minuty</th>
+                        <th style="border: 1px solid #ddd; padding: 5px;">Punkty</th>
+                    </tr>
+                </thead>
+                <tbody>
+        `;
+
+        recentMatches.forEach((match) => {
+            let resultColor = '';
+            if (match.team_result === 'win') {
+                resultColor = 'background-color: #d4edda; color: #155724;'; // Zielony dla wygranej
+            } else if (match.team_result === 'lose') {
+                resultColor = 'background-color: #f8d7da; color: #721c24;'; // Czerwony dla przegranej
+            } else if (match.team_result === 'draw') {
+                resultColor = 'background-color: #fff3cd; color: #856404;'; // Żółty dla remisu
+            }
+            tableHTML += `
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 5px;">${match.game_week}</td>
+                    <td style="border: 1px solid #ddd; padding: 5px;">${match.opponent}</td>
+                    <td style="border: 1px solid #ddd; padding: 5px; ${resultColor}">${match.score}</td>
+                    <td style="border: 1px solid #ddd; padding: 5px;">${match.played_time === "-" ? "Nie grał" : match.played_time}</td>
+                    <td style="border: 1px solid #ddd; padding: 5px;">${match.points === "-" ? "-" : match.points}</td>
+                </tr>
+            `;
+        });
+        upcoming_matches.forEach((match) => {
+            tableHTML += `
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 5px;">${match.game_week}</td>
+                    <td style="border: 1px solid #ddd; padding: 5px;">${match.opponent}</td>
+                    <td style="border: 1px solid #ddd; padding: 5px;"></td>
+                    <td style="border: 1px solid #ddd; padding: 5px;"></td>
+                    <td style="border: 1px solid #ddd; padding: 5px;"></td>
+                </tr>
+            `;
+        });
+
+        tableHTML += `
+                </tbody>
+            </table>
+        `;
+
+        return tableHTML;
+    }
+
+    // *** Funkcja tworząca popup ***
+    function createPopup(content) {
+
+        // Usuń poprzedni popup
+        if (activePopup) {
+            activePopup.remove();
+            activePopup = null;
+        }
+
+        const popup = document.createElement('div');
+        popup.className = 'player-popup';
+        popup.innerHTML = content;
+        popup.style.position = 'absolute';
+        popup.style.backgroundColor = 'white';
+        popup.style.border = '1px solid black';
+        popup.style.padding = '10px';
+        popup.style.zIndex = '1000';
+        popup.style.boxShadow = '0px 4px 8px rgba(0, 0, 0, 0.2)';
+        popup.style.display = 'none';
+        document.body.appendChild(popup);
+
+        activePopup = popup;
+        return popup;
+    }
+
+    // *** Funkcja pokazująca popup przy elemencie ***
+    function showPopup(popup, element, offsetX, offsetY) {
+        const rect = element.getBoundingClientRect();
+
+        // Ustaw pozycję popupu, aby był poniżej kursora
+        popup.style.top = `${window.scrollY + rect.bottom + offsetY}px`; // `rect.bottom` - poniżej elementu, +10px przerwy
+        popup.style.left = `${window.scrollX + rect.left + offsetX}px`; // Zgodne z lewą krawędzią elementu
+        popup.style.display = 'block';
+    }
+
+    // *** Funkcja ukrywająca popup ***
+    function hidePopup() {
+        if (activePopup) {
+            activePopup.remove();
+            activePopup = null;
+        }
+    }
+
+    function addPlayerCardHoverEvents() {
+        const players = document.querySelectorAll('.player');
+
+        if (players.length === 0) {
+            console.warn("[Hover] Nie znaleziono żadnych .player na stronie.");
+            return;
+        }
+
+        players.forEach((player, index) => {
+            const playerId = player.getAttribute('data-player-id');
+
+            if (!playerId) {
+                console.warn(`[Hover] Element ${index + 1} nie posiada atrybutu "data-player-id". Pomijam.`);
+                return;
+            }
+
+            player.addEventListener('mouseover', async () => {
+                const popup = createPopup(`Ładowanie danych dla gracza ID: ${playerId}...`);
+
+                const data = await fetchPlayerData(playerId);
+                if (data) {
+                    const matchesTable = createMatchesTable(data.recent_matches, data.upcoming_matches);
+
+                    popup.innerHTML = `
+                    <div><strong>Punkty:</strong> ${data.total_points || 0}</div>
+                    ${matchesTable}
+                `;
+                } else {
+                    popup.innerHTML = `<div>Błąd w pobieraniu danych</div>`;
+                    console.warn(`[Hover] Nie udało się pobrać danych dla gracza ID: ${playerId}.`);
+                }
+
+                showPopup(popup, player, -60, 30);
+            });
+
+            player.addEventListener('mouseout', () => {
+                hidePopup();
+            });
+        });
+    }
+
+    // *** Funkcja obsługująca hover dla playerList (<td class="tpl-first">) ***
+    function addPlayerRowHoverEvents() {
+    const rows = document.querySelectorAll('tr[data-player-position]'); // Szukamy wszystkich wierszy, które mają atrybut data-player-position
+
+    if (rows.length === 0) {
+        console.warn("[Hover] Nie znaleziono żadnych wierszy <tr> z atrybutem 'data-player-position'.");
+        return;
+    }
+
+    rows.forEach((row, index) => {
+        // Pobieramy ID gracza z elementu w <td class="tpl-first"> lub innego miejsca
+        const playerId = row.querySelector('[data-player-id]')?.getAttribute('data-player-id');
+
+        if (!playerId) {
+            console.warn(`[Hover] Wiersz ${index + 1} nie posiada elementu z "data-player-id". Pomijam.`);
+            return;
+        }
+
+        // Zdarzenie najechania myszką
+        row.addEventListener('mouseover', async () => {
+
+            const popup = createPopup(`Ładowanie danych dla gracza ID: ${playerId}...`);
+
+            // Pobieramy dane z API
+            const data = await fetchPlayerData(playerId);
+            if (data) {
+                const matchesTable = createMatchesTable(data.recent_matches, data.upcoming_matches);
+
+                // Ustawienie zawartości popupu z danymi gracza
+                popup.innerHTML = `
+                    <div><strong>Punkty:</strong> ${data.total_points || 0}</div>
+                    ${matchesTable}
+                `;
+            } else {
+                popup.innerHTML = `<div>Błąd w pobieraniu danych</div>`;
+                console.warn(`[Hover] Nie udało się pobrać danych dla gracza ID: ${playerId}.`);
+            }
+
+            // Wyświetlenie popupu przy elemencie <tr>
+            showPopup(popup, row, 0, 0);
+        });
+
+        // Zdarzenie opuszczenia myszką
+        row.addEventListener('mouseout', () => {
+            hidePopup();
+        });
+    });
+}
+
+    function initializeHover() {
+        addPlayerCardHoverEvents();
+        setTimeout(() => {
+            addPlayerRowHoverEvents(); // Obsługa dla wierszy <tr>
+        }, 3000);
+    }
+
+    // Monitorowanie zmian URL przez nasłuchiwanie na `popstate`
+    window.addEventListener('popstate', () => {
+        console.log(`[UserScript] Zmieniono URL na: ${window.location.href}`);
+        initializeHover(); // Ponowne uruchomienie inicjalizacji hover
+    });
+
+    // Dodatkowo uruchamiamy hover podczas początkowego ładowania
+    initializeHover();
+
+})();
